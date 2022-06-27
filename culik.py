@@ -68,8 +68,8 @@ bots = [bot for bot in [bot1, bot2, bot3, bot4, bot5] if bot]
 
 print("Selamat datang di pyrogram adder members")
 
-bahan = input("silahkan masukan username group yang mau di culik")
-target = input("silahkan masukan username yang mau di tambahkan")
+bahan = input("silahkan masukan username group yang mau di culik :\n")
+target = input("silahkan masukan username yang mau di tambahkan :\n")
 
 
 for bot in bots:
