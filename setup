@@ -1,0 +1,40 @@
+#!/bin/bash
+
+installation(){
+	pprint "\n\nUpgrading pip and installing dependency packages.. "
+	pip3 install pyrogram==1.4.16 &&
+	pprint "DONE.\n" "cgreen" && return
+	pprint "FAIL.\n" "cred"
+	exit 1
+}
+
+clear
+pprint "Selamat datang di Penginstal Pengaturan adder members\n\n"
+pprint "Jika Anda melihat kesalahan selama Proses Instalasi, Silakan merujuk ke file-file ini untuk log:"
+pprint "\nUntuk kesalahan paket pypi, Periksa pypilog.txt"
+
+installation
+pprint "\n\n\n\n\nadder members Installation selesai!" "cgreen"
+sleep 4
+clear
+
+pprint "\nMasukkan Valuenya\n\n\n"
+pprint "\nPYROGRAM STRING1: "; color_reset; read string_session1
+pprint "\nPYROGRAM STRING2: "; color_reset; read string_session2
+pprint "\nPYROGRAM STRING3: "; color_reset; read string_session3
+pprint "\nPYROGRAM STRING4: "; color_reset; read string_session4
+pprint "\nPYROGRAM STRING5: "; color_reset; read string_session5
+pprint "\n\nMemproses vars Anda, Tunggu sebentar!" "cgreen"
+
+if [ -f .env ]; then
+	rm .env
+fi
+
+echo """STRING_SESSION1 = $string_session1
+STRING_SESSION2 = $string_session2
+STRING_SESSION3 = $string_session3
+STRING_SESSION4 = $string_session4
+STRING_SESSION = $string_session5""" > .env
+clear
+pprint "\n\n\nVars Anda telah berhasil disimpan!, Terima kasih telah menggunakan Musikku Installer, sekarang Anda dapat melanjutkan dengan memulai bot dengan bash start!"
+pprint "\n\n\nIngin lebih banyak vars?"
