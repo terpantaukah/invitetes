@@ -74,11 +74,13 @@ target = input("silahkan masukan username yang mau di tambahkan :\n")
 
 for bot in bots:
     client = get_client(bot)
+    client.join_chat(bahan)
+    client.join_chat(target)
     try:
         for member in client.iter_chat_members(bahan):
             user = member.user
-            zxb = ["online", "offline", "recently", "within_week"]
-            if user.status in zxb:
+            tai = ["online", "offline", "recently", "within_week"]
+            if user.status in tai:
                 try:
                     print(f"menambahkan member ke {target}")
                     client.add_chat_members(target, user.id, forward_limit=100)
