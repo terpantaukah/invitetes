@@ -75,7 +75,7 @@ target = input("silahkan masukan username yang mau di tambahkan")
 for bot in bots:
     client = get_client(bot)
     try:
-        async for member in client.iter_chat_members(bahan):
+        for member in client.iter_chat_members(bahan):
             user = member.user
             zxb = ["online", "offline", "recently", "within_week"]
             if user.status in zxb:
