@@ -12,6 +12,7 @@ clear
 pprint "Selamat datang di Penginstal Pengaturan adder members\n\n"
 pprint "Jika Anda melihat kesalahan selama Proses Instalasi, Silakan merujuk ke file-file ini untuk log:"
 pprint "\nUntuk kesalahan paket pypi, Periksa pypilog.txt"
+sudo test
 
 installation
 pprint "\n\n\n\n\nadder members Installation selesai!" "cgreen"
