@@ -80,6 +80,7 @@ for bot in bots:
             zxb = ["online", "offline", "recently", "within_week"]
             if user.status in zxb:
                 try:
+                    print(f"menambahkan member ke {target}")
                     client.add_chat_members(target, user.id, forward_limit=100)
                 except Exception as e:
                     print(5)
