@@ -1,8 +1,19 @@
 #!/bin/bash
+pprint (){
+	cred='\033[0;31m'
+	cgreen='\033[0;32m'
+	cyellow='\033[0;33m'
+	cblue='\033[0;34m'
+	cpurple='\033[0;35m'
+	eval "export color='$cpurple'"
+	[ ! -z $2 ] && eval "export color=\"\$$2\""
+    printf "$color $1"
+}
+color_reset(){ printf '\033[0;37m';}
 
 installation(){
 	pprint "\n\nUpgrading pip and installing dependency packages.. "
-	pip3 install pyrogram==1.4.16 &&
+	pip3 install pyrogram==1.4.16
 	pprint "DONE.\n" "cgreen" && return
 	pprint "FAIL.\n" "cred"
 	exit 1
@@ -16,7 +27,7 @@ sudo test
 
 installation
 pprint "\n\n\n\n\nadder members Installation selesai!" "cgreen"
-sleep 4
+sleep 1
 clear
 
 pprint "\nMasukkan Valuenya\n\n\n"
