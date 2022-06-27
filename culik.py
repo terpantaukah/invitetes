@@ -73,7 +73,7 @@ target = input("silahkan masukan username yang mau di tambahkan")
 
 
 for bot in bots:
-    client = await get_client(bot)
+    client = get_client(bot)
     try:
         async for member in client.iter_chat_members(bahan):
             user = member.user
