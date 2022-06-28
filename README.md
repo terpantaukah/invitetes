@@ -1,4 +1,4 @@
-# invitetes
+# invite pyrogram
 tes script
 
 
