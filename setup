@@ -46,7 +46,7 @@ echo """STRING_SESSION1 = $string_session1
 STRING_SESSION2 = $string_session2
 STRING_SESSION3 = $string_session3
 STRING_SESSION4 = $string_session4
-STRING_SESSION = $string_session5""" > .env
+STRING_SESSION5 = $string_session5""" > .env
 clear
 pprint "\n\n\nVars Anda telah berhasil disimpan!, Terima kasih telah menggunakan Musikku Installer, sekarang Anda dapat melanjutkan dengan memulai bot dengan bash start!"
 pprint "\n\n\nIngin lebih banyak vars?"
